@@ -1,0 +1,620 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    overflow-x: relative;
+    background-image: url('Ciuda.PNG');
+    background-size: cover;
+    
+    
+}
+
+html {
+    scroll-behavior: smooth;
+} 
+
+/* barra de navegacion*/
+.navegacion {
+    position: fixed;
+    height: 60px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background: rgba(86, 93, 103, 0.5); /* oscuro translúcido */
+    padding: 10px 5%;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    transform: translateY(0); /* Inicialmente visible */
+    transition: transform 0.3s ease-in-out; /* Animación de desplazamiento */
+}
+
+.nav-menu {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.navegacion .nav-menu ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+}
+
+.navegacion .nav-menu ul li a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-size: 16px;
+    position: relative;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    white-space: nowrap;
+    font-weight: bold;
+
+}
+
+.navegacion .nav-menu ul li a::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: white;
+    transform: translateX(-50%);
+    transition: width 0.3s ease;
+}
+
+.navegacion .nav-menu ul li a:hover::after {
+    width: 100%;
+}
+
+.navegacion ul li a {
+    color: white; /* Color del texto */
+    text-decoration: none; /* Sin subrayado */
+    font-size: 16px;
+    position: relative; /* Necesario para la animación */
+    transition: all 0.3s ease;
+    font-weight: 500;
+    white-space: nowrap; /* Evita saltos de línea */
+}
+
+.navegacion ul li a::after {
+    content: ""; /* Crea el efecto de línea */
+    position: absolute; /* Línea colocada debajo del texto */
+    bottom: -3px; /* Espaciado desde el texto */
+    left: 50%; /* Comienza en el centro */
+    width: 0; /* Inicialmente oculta */
+    height: 2px; /* Grosor de la línea */
+    background-color: white; /* Color de la línea */
+    transform: translateX(-50%); /* Centra la línea */
+    transition: width 0.3s ease; /* Efecto de animación */
+}
+
+.navegacion ul li a:hover::after {
+    width: 100%; /* Expande la línea al hacer hover */
+}
+
+.logo {
+    
+    z-index: 1001; /* Asegura que esté sobre otros elementos */
+    
+    margin-left: -50px; /* mueve el logo hacia la izquierda */
+}
+
+
+
+.logo img {
+    height: 160px;        /* tamaño del logo */
+    width: auto;         /* mantiene proporción */
+    display: block;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+    margin-top: 15px;
+    
+}
+
+.logo img:hover {
+    transform: scale(1.05);
+}
+
+
+.navegacion nav ul {
+    list-style: none; /* Elimina los puntos de las listas */
+    display: flex; /* Alinea los enlaces en fila */
+    gap: 25px; /* Espaciado entre los enlaces */
+    margin: 0;
+    padding: 0;
+}
+
+.navegacion nav ul li a {
+    color: rgb(255, 255, 255); /* Texto blanco */
+    text-decoration: none; /* Sin subrayado */
+    font-size: 16px; /* Tamaño del texto */
+    position: relative; /* Necesario para la animación de la línea */
+    transition: all 0.3s ease; /* Animaciones suaves */
+    font-weight: 500;
+    white-space: nowrap; /* Evita saltos de línea */
+    
+}
+
+.navegacion nav ul li a:hover {
+    transform: scale(1.1); /* Agrandamiento al pasar cursor */
+}
+
+.navegacion nav ul li a::after {
+    content: ""; /* Línea decorativa */
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: rgb(255, 255, 255);
+    transform: translateX(-50%);
+    transition: width 0.3s ease;
+}
+
+.navegacion nav ul li a:hover::after{
+    width: 100%; /* Muestra la línea al hacer hover */
+}
+
+.technocity {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image: url('Copilot_20260423_223007.png'); /* ← AQUÍ VA TU IMAGEN DE FONDO */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+
+.resumen-proyecto {
+    padding: 80px 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contenedor-proyecto {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+    margin-bottom: 60px;
+}
+
+.imagen-proyecto {
+    width: 500px;
+    height: 320px;
+    background-color: #ddd; /* espacio reservado */
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.imagen-proyecto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.texto-proyecto {
+    max-width: 500px;
+}
+
+.texto-proyecto h2 {
+    font-size: 42px;
+    font-weight: 900;
+    margin-bottom: 10px;
+}
+
+.texto-proyecto h3 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #3d4aac;
+}
+
+.texto-proyecto p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.componentes-proyecto {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.componente {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    padding: 25px;
+    width: 250px;
+    text-align: center;
+}
+
+.componente h4 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #000000;
+}
+
+.componente:hover {
+  transform: translateY(-5px);
+  box-shadow: #000;
+}
+
+.componente p {
+    font-size: 16px;
+    color: #555;
+}
+
+
+.btn-techno {
+    background-color: #000;
+    color: #fff;
+    padding: 15px 40px;
+    border: none;
+    border-radius: 6px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.btn-techno:hover {
+    background-color: #004aad;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.6); /* capa blanca translúcida */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenido-techno {
+    text-align: center;
+    color: #000;
+    max-width: 800px;
+}
+
+.contenido-techno h4 {
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.contenido-techno h1 {
+    font-size: 70px;
+    font-weight: 900;
+    margin: 10px 0;
+}
+
+.contenido-techno h3 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.contenido-techno p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 40px;
+}
+
+
+.seccion-3d {
+    padding: 80px 40px;
+    text-align: center;
+    background: #373c53;
+    color: #fff;
+}
+
+.titulo-3d {
+    font-size: 48px;
+    font-weight: 900;
+}
+
+.subtitulo-3d {
+    font-size: 22px;
+    margin-bottom: 40px;
+    opacity: 0.8;
+}
+
+.contenedor-visor {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    background: #1a1a1a;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 0 40px rgba(0,0,0,0.4);
+    position: relative;
+}
+
+.visor-3d {
+    width: 100%;
+    height: 500px;
+    border-radius: 12px;
+    background: #111;
+}
+
+.placeholder-text {
+    margin-top: 20px;
+    font-size: 18px;
+    opacity: 0.7;
+}
+
+
+
+.btn-cargar:hover {
+    background: #005fcc;
+}
+
+.features-3d {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.feature-box {
+    background: #1a1a1a;
+    padding: 30px;
+    width: 280px;
+    border-radius: 14px;
+    text-align: center;
+    color: #fff;
+    box-shadow: 0 0 25px rgba(0,0,0,0.3);
+}
+
+.icon-feature {
+    font-size: 40px;
+    margin-bottom: 15px;
+    display: block;
+}
+
+.feature-box h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.feature-box p {
+    font-size: 16px;
+    opacity: 0.8;
+}
+
+
+.seccion-zyro {
+    padding: 80px 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: #373c53;
+}
+
+.contenedor-zyro {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.imagen-zyro {
+    width: 400px;
+    height: 400px;
+    background-color: #ddd; /* espacio reservado */
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.imagen-zyro img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.texto-zyro {
+    max-width: 500px;
+}
+
+.texto-zyro h2 {
+    font-size: 42px;
+    font-weight: 900;
+    margin-bottom: 10px;
+}
+
+.texto-zyro h3 {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #004aad;
+}
+
+.texto-zyro p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: #fff;
+    text-align: justify;
+}
+
+.caracteristicas-zyro {
+    list-style: none;
+    padding: 0;
+}
+
+.caracteristicas-zyro li {
+    font-size: 17px;
+    margin-bottom: 10px;
+    color: #333;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+
+.seccion-ecosmart {
+    padding: 80px 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: #f8f9fa;
+}
+
+.contenedor-ecosmart {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.imagen-ecosmart {
+    width: 500px;
+    height: 320px;
+    background-color: #ddd; /* espacio reservado */
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.imagen-ecosmart img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.texto-ecosmart {
+    max-width: 500px;
+}
+
+.texto-ecosmart h2 {
+    font-size: 42px;
+    font-weight: 900;
+    margin-bottom: 10px;
+}
+
+.texto-ecosmart h3 {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #008f39; /* verde sostenible */
+}
+
+.texto-ecosmart p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.caracteristicas-ecosmart {
+    list-style: none;
+    padding: 0;
+}
+
+.caracteristicas-ecosmart li {
+    font-size: 17px;
+    margin-bottom: 10px;
+    color: #333;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.seccion-modelo {
+    padding: 80px 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: #f8f9fa;
+}
+
+.contenedor-modelo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.imagenes-modelo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    flex-wrap: wrap; /* permite que se ajusten si la pantalla es pequeña */
+    margin-bottom: 40px;
+}
+
+.imagenes-modelo img {
+    width: 300px; /* tamaño mediano */
+    height: 220px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease;
+}
+
+.imagenes-modelo img:hover {
+    transform: scale(1.05);
+}
+
+.texto-modelo {
+    max-width: 500px;
+    text-align: center;
+    margin-left: 25%;
+}
+
+.texto-modelo h2 {
+    font-size: 42px;
+    font-weight: 900;
+    margin-bottom: 20px;
+    color: #004aad;
+}
+
+.texto-modelo p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.btn-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px 15px;
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 18px;
+    z-index: 999;
+}
