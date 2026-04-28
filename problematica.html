@@ -41,40 +41,28 @@
         </div>
     </header>
 
-<!-- Hero Section -->
 <section class="hero-ihome">
     <div class="overlay">
         <h1 class="hero-title">IHome</h1>
         <p class="hero-sub">"Intelligent Home"</p>
-    <!-- BOTÓN -->
-    <button class="hero-btn" onclick="openVideo()">▶ Ver nuestro video</button>
+        <button class="hero-btn" onclick="openVideo()">▶ Ver nuestro video</button>
+    </div>
 </section>
-
-    <!-- BOTÓN -->
-    <button class="bt-video" onclick="openVideo()">▶ Ver nuestro video</button>
-</section>
-
-<!-- MODAL -->
-<!-- BOTÓN PARA ABRIR EL VIDEO -->
-<button onclick="openVideo()">Ver video</button>
-
 <!-- MODAL -->
 <div id="videoModal" class="modal" onclick="closeVideo()">
     <div class="modal-content" onclick="event.stopPropagation()">
         <button class="close" onclick="closeVideo()">&times;</button>
 
-        <iframe 
-            id="videoFrame"
-            width="100%" 
-            height="400"
-            frameborder="0"
-            allow="autoplay; encrypted-media"
-            allowfullscreen>
-        </iframe>
+        <iframe
+    id="videoFrame"
+    width="100%"
+    height="500"
+    allow="autoplay; encrypted-media"
+    allowfullscreen>
+</iframe>
 
     </div>
 </div>
-
 
     <!-- planos -->
   <section class="ihome-blueprint-section">
