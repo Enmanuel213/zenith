@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zenith</title>
+
+    <!-- Tipografías -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="inicio.css">
+    <link rel="icon" href="icono.ico">
+    <script src="barra.js"></script>
+    <script src="inicio.js"></script>
+</head>
+
+<body id="top">
+
+    <!-- NAV -->
+    <header>
+        <div class="navegacion">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="Copilot_20260424_160829.png" alt="">
+                </a>
+            </div>
+
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="nuestroequipo.html">Nuestro Equipo</a></li>
+                    <li><a href="problematica.html">Ihome</a></li>
+                    <li><a href="Zero.html">Zero</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+
+    <!-- HERO PRINCIPAL -->
+   <section class="hero">
+  
+    <h1>"Innovando hoy para<br>la ciudad del mañana."</h1>
+    <br><br>
+
+    <!-- BOTÓN -->
+    <button class="bt-video" onclick="openVideo()">▶ Ver nuestro video</button>
+</section>
+
+<!-- MODAL -->
+<div id="videoModal" class="modal" onclick="closeVideo()">
+    <div class="modal-content" onclick="event.stopPropagation()">
+        <button class="close" onclick="closeVideo()">&times;</button>
+
+        <video id="videoLocal" controls>
+            <source src="WhatsApp Video 2026-04-24 at 4.01.08 PM.mp4" type="video/mp4">
+        </video>
+
+    </div>
+</div>
+
+
+  
+    <!-- QUIÉNES SOMOS -->
+    <section class="quienes">
+        <div class="contenedor">
+            <div class="imagen">
+                <img src="WhatsApp Image 2026-04-24 at 4.02.26 PM.jpeg" alt="Imagen representativa">
+            </div>
+            
+
+            <div class="informacion">
+                <h2>¿Quiénes somos?</h2>
+                <p><span class="resaltar">Somos una empresa</span> enfocada en resolver problemáticas sociales en ciudades. Nuestro compromiso es transformar las ciudades en lugares más habitables, sostenibles e inclusivos a través de la innovación tecnológica y el trabajo colaborativo.</p>
+            </div>
+        </div>
+
+        <!-- TARJETAS -->
+        <div class="card-container">
+
+            <div class="card">
+                <div class="default-text">Misión</div>
+                <div class="content">
+                    <p>Nuestra misión como empresa es facilitar el estilo de vida de las personas mediante procesos tecnológicos que mejoren la calidad de vida, fomenten la inclusión social y promuevan la sostenibilidad en las ciudades.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="default-text">Visión</div>
+                <div class="content">
+                    <p>Deseamos ser líderes en la implementación de soluciones tecnológicas para el desarrollo de las ciudades, creando comunidades resilientes y empoderadas que se adapten a los desafíos del futuro.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="default-text">Valores</div>
+                <div class="content">
+                    <p>
+                        <strong>Innovación:</strong> Introducción de ideas, métodos o tecnologías nuevas.<br><br>
+                        <strong>Transparencia:</strong> Actuar con claridad y sinceridad, promoviendo la confianza.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+   
+<section class="proyectos">
+    <h2>Proyectos</h2>
+
+    <!-- Proyecto normal (imagen izquierda) -->
+     <div class="proyecto-card reverse">
+        <img src="casa.webp" alt="Proyecto imagen">
+
+        <div class="proyecto-info">
+            <span class="proyecto-year">2025</span>
+            <h3 class="proyecto-title">IHome</h3>
+            <p class="proyecto-location">Santo Domingo, RD</p>
+
+            <p class="proyecto-desc">
+                IHome es una maqueta de casa inteligente que integra sistemas automatizados para mejorar la seguridad,
+        el confort y la sostenibilidad del hogar, incorporando vigilancia conectada, sensores de movimiento
+        y soluciones para optimizar recursos.
+            </p>
+
+            <div class="proyecto-tag"> Casa domótica inteligente</div>
+            <a href="problematica.html" class="proyecto-btn">Ver proyecto</a>
+        </div>
+    </div>
+
+    <!-- Proyecto invertido (imagen derecha) -->
+    <div class="proyecto-card reverse">
+    <img src="zeros.webp" alt="Proyecto imagen">
+
+    <div class="proyecto-info">
+        <span class="proyecto-year">2026</span>
+        <h3 class="proyecto-title">TechnoCity</h3>
+        <p class="proyecto-location">Santo Domingo, RD</p>
+
+        <p class="proyecto-desc">
+            TechnoCity integra un robot guía turístico y contenedores inteligentes para mejorar la experiencia
+            cultural y la gestión ambiental en zonas turísticas. Combina robótica, IoT y soluciones sostenibles
+            para optimizar la información al visitante y mejorar la limpieza urbana mediante monitoreo en tiempo real.
+        </p>
+
+        <div class="proyecto-tag">Tecnología para ciudades inteligentes</div>
+
+        <a href="Zero.html" class="proyecto-btn">Ver proyecto</a>
+    </div>
+</div>
+
+</section>
+
+    <!-- SIGNIFICADO DEL NOMBRE + REDES -->
+ <section class="zenith-section">
+    <div class="zenith-container">
+
+        <h2 class="zenith-title">Zenith</h2>
+
+        <p class="zenith-line">
+            <span class="zenith-key">ZEN</span>: El punto más alto al que queremos llevar nuestra ciudad.
+        </p>
+
+        <p class="zenith-line">
+            <span class="zenith-key">ITH</span>: Information Technology Hub, centro de tecnología e innovación.
+        </p>
+
+        <div class="zenith-social">
+             <a href="https://www.instagram.com/zenith.5inf/?hl=es-la" target="_blank" class="social-link">
+                    <img src="instagram-logo-instagram-icon-transparent-free-png.webp" alt="Sígueme en redes">
+                </a>
+        
+                <a href="https://mail.google.com/mail/u/0/?fs=1&to=zenithihome@gmail.com&tf=cm" class="social-link" target="_blank">
+                    <img src="email-and-mail-icon-black-free-png.webp" alt="Enviar correo">
+                </a>
+        </div>
+
+    </div>
+<a href="#top" class="btn-top">⬆</a>
+
+</section>
+
+
+
+
+</body>
+</html>

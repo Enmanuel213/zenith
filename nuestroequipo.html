@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Zenith</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Optimización de fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="nuestroequipo.css">
+    <link rel="icon" href="icono.ico">
+</head>
+
+<body id="top">
+
+    <header>
+        <div class="navegacion">
+            <div class="logo">
+                <img src="Copilot_20260424_160829.png" alt="">
+                </a>
+            </div>
+
+            <nav class="nav-menu" id="nav-menu">
+                <ul>
+                    <li><a href="nuestroequipo.html">Nuestro Equipo</a></li>
+                    <li><a href="problematica.html">Ihome</a></li>
+                    <li><a href="Zero.html">Zero</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- SLIDER OPTIMIZADO -->
+    <div class="slider">
+        <div class="slide active">
+            <img src="IMG_5057.JPG" loading="lazy" alt="Slide 1">
+        </div>
+        <div class="slide">
+            <img src="IMG_5069.JPG" loading="lazy" alt="Slide 2">
+        </div>
+        <div class="slide">
+            <img src="IMG_5075.JPG" loading="lazy" alt="Slide 3">
+        </div>
+    </div>
+
+    <button class="arrow prev">&#10094;</button>
+    <button class="arrow next">&#10095;</button>
+
+    <div class="dots">
+        <span class="dot" onclick="goToSlide(0)"></span>
+        <span class="dot" onclick="goToSlide(1)"></span>
+        <span class="dot" onclick="goToSlide(2)"></span>
+    </div>
+
+    <!-- SECCIÓN EQUIPO -->
+    <section class="container-deportistas">
+        <h1 class="titulo">Nuestro Equipo</h1>
+
+        <div class="gallery">
+
+            <!-- CEO -->
+            <div class="card">
+                <img src="CEOS 1.png" loading="lazy" alt="CEO">
+                <div class="content">
+                    <h2>CEO´S</h2>
+                    <p>Máximos responsables de la dirección estratégica de la empresa.</p>
+                </div>
+            </div>
+
+            <!-- Daris -->
+            <div class="card">
+                <img src="Darisleydi.jpg" loading="lazy" alt="Darisleidy">
+                <div class="content">
+                    <h2>Darisleidy Tiburcio</h2>
+                    <p><strong>Presidenta</strong></p>
+                    <p>Encargada de la visión y dirección general de la empresa.</p>
+                </div>
+            </div>
+
+            <!-- Javier -->
+            <div class="card">
+                <img src="Javier.jpg" loading="lazy" alt="Javier">
+                <div class="content">
+                    <h2>Javier Soto</h2>
+                    <p><strong>VicePresidente</strong></p>
+                    <p>Supervisa las operaciones diarias y coordina departamentos.</p>
+                </div>
+            </div>
+
+            <!-- Sarah y Ryan -->
+            <div class="card">
+                <img src="Sarah-Ryan.jpg" loading="lazy" alt="Finanzas">
+                <div class="content">
+                    <h2>Sarah B. y Ryan S.</h2>
+                    <p><strong>Directores de finanza</strong></p>
+                    <p>Gestionan la planificación financiera y análisis estratégico.</p>
+                </div>
+            </div>
+
+            <!-- Johanny y Dayana -->
+            <div class="card">
+                <img src="Johanny-Dayana.jpg" loading="lazy" alt="Tecnología">
+                <div class="content">
+                    <h2>Johanny y Dayana F.</h2>
+                    <p><strong>Directores de Tecnología</strong></p>
+                    <p>Responsables de la estrategia tecnológica e innovación.</p>
+                </div>
+            </div>
+
+            <!-- Enmanuel y Micaela -->
+            <div class="card">
+                <img src="Enmanuel-Micaela.jpg" loading="lazy" alt="Arquitectura">
+                <div class="content">
+                    <h2>Enmanuel N. y Micaela C.</h2>
+                    <p><strong>Diseñadores arquitectónicos</strong></p>
+                    <p>Crean y presentan diseños arquitectónicos y estructurales.</p>
+                </div>
+            </div>
+
+            <!-- Ian y Rosswel -->
+            <div class="card">
+                <img src="Roswell-Ian.JPG" loading="lazy" alt="Producción">
+                <div class="content">
+                    <h2>Ian C. y Rosswel N.</h2>
+                    <p><strong>Gerentes de producción</strong></p>
+                    <p>Supervisan procesos productivos y control de calidad.</p>
+                </div>
+            </div>
+
+            <!-- Sanyelis y Wilfredo -->
+            <div class="card">
+                <img src="Sanyelis-Wilfredo.JPG" loading="lazy" alt="Calidad">
+                <div class="content">
+                    <h2>Sanyelis G. y Wilfredo F.</h2>
+                    <p><strong>Gerentes de calidad</strong></p>
+                    <p>Establecen estándares y lideran mejoras continuas.</p>
+                </div>
+            </div>
+
+            <!-- Jireh y Rosangel -->
+            <div class="card">
+                <img src="Jireh-Rosangel.JPG" loading="lazy" alt="Atención al cliente">
+                <div class="content">
+                    <h2>Jireh M. y Rosangel R.</h2>
+                    <p><strong>Atención al cliente</strong></p>
+                    <p>Brindan soporte, gestionan quejas y organizan documentos.</p>
+                </div>
+            </div>
+
+            <!-- Alejandro y Luham -->
+            <div class="card">
+                <img src="Alejandro-Luhan.JPG" loading="lazy" alt="Hardware">
+                <div class="content">
+                    <h2>Alejandro P. y Luham L.</h2>
+                    <p><strong>Desarrolladores de hardware</strong></p>
+                    <p>Crean y optimizan dispositivos conectados.</p>
+                </div>
+            </div>
+
+            <!-- Henry y Dariel -->
+            <div class="card">
+                <img src="Henry-Dariel.JPG" loading="lazy" alt="Ventas">
+                <div class="content">
+                    <h2>Henry L. y Dariel E.</h2>
+                    <p><strong>Representantes de venta</strong></p>
+                    <p>Gestionan clientes y oportunidades de venta.</p>
+                </div>
+            </div>
+
+            <!-- Daniel y Francis -->
+            <div class="card">
+                <img src="Daniel-Francis.JPG" loading="lazy" alt="Software">
+                <div class="content">
+                    <h2>Daniel C. y Francis V.</h2>
+                    <p><strong>Desarrolladores de software</strong></p>
+                    <p>Desarrollan, prueban y mantienen aplicaciones.</p>
+                </div>
+            </div>
+
+        </div>
+
+        <a href="#top" class="btn-top">⬆</a>
+    </section>
+
+    <!-- Script movido al final para no bloquear la carga -->
+    <script src="slide.js"></script>
+
+</body>
+</html>

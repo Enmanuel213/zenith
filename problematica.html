@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Zenith</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Playwrite+DE+Grund&family=Signika+Negative:wght@300..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Abyssinica+SIL&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="problematica.css">
+    <script src="problematicas.js"></script>
+    <link rel="icon" href="icono.ico">
+    <SCript src="barra.js"></SCript>
+
+</head>
+
+<body id="top">
+    <header>
+        <div class="navegacion">
+            <!-- Logo a la izquierda -->
+            <div class="logo">
+                <a href="index.html">
+                   <img src="Copilot_20260424_160829.png" alt="">
+                
+                </a>
+            </div>
+            
+          
+            
+            <!-- Menú de navegación -->
+            <div class="nav-menu" id="nav-menu">
+                <ul>
+                    <li><a href="nuestroequipo.html">Nuestro Equipo</a></li>
+                    <li><a href="problematica.html">Ihome</a></li>
+                    <li><a href="Zero.html">Zero</a></li>
+                </ul>
+            </div>
+            
+            
+        </div>
+    </header>
+
+<section class="hero-ihome">
+    <div class="overlay">
+        <h1 class="hero-title">IHome</h1>
+        <p class="hero-sub">"Intelligent Home"</p>
+        <button class="hero-btn" onclick="openVideo()">▶ Ver nuestro video</button>
+    </div>
+</section>
+<!-- MODAL -->
+<div id="videoModal" class="modal" onclick="closeVideo()">
+    <div class="modal-content" onclick="event.stopPropagation()">
+        <button class="close" onclick="closeVideo()">&times;</button>
+
+        <iframe
+    id="videoFrame"
+    width="100%"
+    height="500"
+    allow="autoplay; encrypted-media"
+    allowfullscreen>
+</iframe>
+
+    </div>
+</div>
+
+    <!-- planos -->
+  <section class="ihome-blueprint-section">
+    <div class="ihome-blueprint-container">
+
+        <div class="ihome-blueprint-image">
+            <img src="vista desde arriba zenith.jpg" alt="Planos IHome">
+        </div>
+
+        <div class="ihome-blueprint-text">
+            <h2 class="bp-title">📜 IHome Planos</h2>
+
+            <p class="bp-desc">
+                IHome es un proyecto que se basa en la creación de una casa domótica (maqueta),
+                abordando problemáticas del día a día como la inseguridad ciudadana, problemas
+                medioambientales e ineficiencia en los servicios básicos. A partir de ello,
+                buscamos soluciones como sistemas de vigilancia conectados, sensores de movimiento
+                y un sistema de filtrado de agua, entre otros.
+            </p>
+
+            <p class="bp-desc">
+                IHome es una maqueta de casa inteligente diseñada para demostrar la eficiencia
+                y comodidad que brindan las tecnologías automatizadas en la vida diaria. Su
+                integración combina distintos sistemas tecnológicos para mejorar la seguridad,
+                el confort y la sostenibilidad dentro del hogar.
+            </p>
+        </div>
+
+    </div>
+</section>
+    <!-- funcionalides -->
+<section class="funcionalidades-ihome">
+    <h2 class="titulo-func">Funcionalidades del proyecto</h2>
+
+    <div class="func-grid-2x2">
+
+        <!-- 1 -->
+        <div class="func-box">
+            <img src="camara.jpeg" alt="Cámara de vigilancia">
+            <h3>Cámara de vigilancia</h3>
+            <p>Dispositivo que captura imágenes o video en tiempo real para supervisión remota.</p>
+        </div>
+
+        <!-- 2 -->
+        <div class="func-box">
+            <img src="Copilot_20260421_021037.png" alt="Filtrado de agua">
+            <h3>Filtrado de agua</h3>
+            <p>Proceso que elimina impurezas y mejora la calidad del agua.</p>
+        </div>
+
+        <!-- 3 -->
+        <div class="func-box">
+            <img src="Copilot_20260421_023424.png" alt="Luces activadas por voz">
+            <h3>Luces activadas por voz</h3>
+            <p>Iluminación que responde a comandos de voz e integra asistentes virtuales.</p>
+        </div>
+
+        <!-- 4 -->
+        <div class="func-box">
+            <img src="sensores.jpg" alt="Sensores de luz">
+            <h3>Sensores de luz</h3>
+            <p>Sensores que detectan luz y ajustan la iluminación automáticamente.</p>
+        </div>
+
+    </div>
+
+    <a href="#top" class="btn-top">⬆</a>
+</section>
+
+        
+        
+        
+
+
+
+</body>
+</html>
+
+
+
+
+

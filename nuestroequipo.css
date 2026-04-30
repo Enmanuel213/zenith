@@ -1,0 +1,332 @@
+/* =================== RESET =================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
+    background: url('Ciuda.PNG') center/cover no-repeat fixed;
+}
+
+/* =================== NAVBAR =================== */
+.navegacion {
+    position: fixed;
+    height: 60px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background: rgba(86, 93, 103, 0.5); /* oscuro translúcido */
+    padding: 10px 5%;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    transform: translateY(0); /* Inicialmente visible */
+    transition: transform 0.3s ease-in-out; /* Animación de desplazamiento */
+}
+
+.nav-menu {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.navegacion .nav-menu ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+}
+
+.navegacion .nav-menu ul li a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-size: 16px;
+    position: relative;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    white-space: nowrap;
+    font-weight: bold;
+
+}
+
+.navegacion .nav-menu ul li a::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: white;
+    transform: translateX(-50%);
+    transition: width 0.3s ease;
+}
+
+.navegacion .nav-menu ul li a:hover::after {
+    width: 100%;
+}
+
+.navegacion ul li a {
+    color: white; /* Color del texto */
+    text-decoration: none; /* Sin subrayado */
+    font-size: 16px;
+    position: relative; /* Necesario para la animación */
+    transition: all 0.3s ease;
+    font-weight: 500;
+    white-space: nowrap; /* Evita saltos de línea */
+}
+
+.navegacion ul li a::after {
+    content: ""; /* Crea el efecto de línea */
+    position: absolute; /* Línea colocada debajo del texto */
+    bottom: -3px; /* Espaciado desde el texto */
+    left: 50%; /* Comienza en el centro */
+    width: 0; /* Inicialmente oculta */
+    height: 2px; /* Grosor de la línea */
+    background-color: white; /* Color de la línea */
+    transform: translateX(-50%); /* Centra la línea */
+    transition: width 0.3s ease; /* Efecto de animación */
+}
+
+.navegacion ul li a:hover::after {
+    width: 100%; /* Expande la línea al hacer hover */
+}
+
+.logo {
+    
+    z-index: 1001; /* Asegura que esté sobre otros elementos */
+    
+    margin-left: -50px; /* mueve el logo hacia la izquierda */
+}
+
+
+
+.logo img {
+    height: 160px;        /* tamaño del logo */
+    width: auto;         /* mantiene proporción */
+    display: block;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+    margin-top: 15px;
+    
+}
+
+.logo img:hover {
+    transform: scale(1.05);
+}
+
+
+.navegacion nav ul {
+    list-style: none; /* Elimina los puntos de las listas */
+    display: flex; /* Alinea los enlaces en fila */
+    gap: 25px; /* Espaciado entre los enlaces */
+    margin: 0;
+    padding: 0;
+}
+
+.navegacion nav ul li a {
+    color: rgb(255, 255, 255); /* Texto blanco */
+    text-decoration: none; /* Sin subrayado */
+    font-size: 16px; /* Tamaño del texto */
+    position: relative; /* Necesario para la animación de la línea */
+    transition: all 0.3s ease; /* Animaciones suaves */
+    font-weight: 500;
+    white-space: nowrap; /* Evita saltos de línea */
+    
+}
+
+.navegacion nav ul li a:hover {
+    transform: scale(1.1); /* Agrandamiento al pasar cursor */
+}
+
+.navegacion nav ul li a::after {
+    content: ""; /* Línea decorativa */
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: rgb(255, 255, 255);
+    transform: translateX(-50%);
+    transition: width 0.3s ease;
+}
+
+.navegacion nav ul li a:hover::after{
+    width: 100%; /* Muestra la línea al hacer hover */
+}
+
+
+
+
+/* =================== SLIDER =================== */
+.slider {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.slide.active {
+    opacity: 1;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+    border: none;
+    cursor: pointer;
+    z-index: 10;
+    padding: 10px;
+    border-radius: 50%;
+}
+
+.arrow.prev { left: 10px; }
+.arrow.next { right: 10px; }
+
+.dots {
+    position: absolute;
+    bottom: 12px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    background: #ccc;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.dot.active {
+    background: #0d1097;
+}
+
+/* =================== SECCIÓN EQUIPO =================== */
+.container-deportistas {
+    background: #fff;
+    padding: 120px 20px 50px;
+   
+}
+
+.titulo {
+    text-align: center;
+    color: #004080;
+    font-size: 40px;
+    margin-bottom: 40px;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    margin: 0 4%;
+}
+
+/* =================== TARJETAS =================== */
+.card {
+    position: relative;
+    width: 260px;
+    height: 380px;
+    border-radius: 15px;
+    overflow: hidden;
+    background: #f4f4f4;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.03);
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.15s ease-out, transform 0.15s ease-out;
+    will-change: opacity, transform;
+}
+
+.card:hover img {
+    opacity: 0.35;
+    transform: scale(1.02);
+    transition: opacity 0.15s ease-out, transform 0.15s ease-out;
+}
+
+.card .content {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.85);
+    color: white;
+    padding: 20px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.card:hover .content {
+    opacity: 1;
+}
+
+.card .content h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.card .content p {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* =================== BOTÓN SUBIR =================== */
+.btn-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px 15px;
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 18px;
+    z-index: 999;
+}
+
+
+
+
+
+
+

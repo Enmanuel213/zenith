@@ -1,0 +1,659 @@
+/* -------------------- */
+/* ESTILOS GENERALES    */
+/* -------------------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+
+body {
+    background: #ffffff;
+    color: #1a1a1a;
+    line-height: 1.6;
+}
+
+/* -------------------- */
+html {
+    scroll-behavior: smooth;
+} 
+
+/* barra de navegacion*/
+
+.navegacion {
+    position: fixed;
+    height: 60px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background: rgba(86, 93, 103, 0.5); /* oscuro translúcido */
+    padding: 10px 5%;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    transform: translateY(0); /* Inicialmente visible */
+    transition: transform 0.3s ease-in-out; /* Animación de desplazamiento */
+}
+
+.nav-menu {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.navegacion .nav-menu ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+}
+
+.navegacion .nav-menu ul li a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-size: 16px;
+    position: relative;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    white-space: nowrap;
+    font-weight: bold;
+
+}
+
+.navegacion .nav-menu ul li a::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: white;
+    transform: translateX(-50%);
+    transition: width 0.3s ease;
+}
+
+.navegacion .nav-menu ul li a:hover::after {
+    width: 100%;
+}
+
+.navegacion ul li a {
+    color: white; /* Color del texto */
+    text-decoration: none; /* Sin subrayado */
+    font-size: 16px;
+    position: relative; /* Necesario para la animación */
+    transition: all 0.3s ease;
+    font-weight: 500;
+    white-space: nowrap; /* Evita saltos de línea */
+}
+
+.navegacion ul li a::after {
+    content: ""; /* Crea el efecto de línea */
+    position: absolute; /* Línea colocada debajo del texto */
+    bottom: -3px; /* Espaciado desde el texto */
+    left: 50%; /* Comienza en el centro */
+    width: 0; /* Inicialmente oculta */
+    height: 2px; /* Grosor de la línea */
+    background-color: white; /* Color de la línea */
+    transform: translateX(-50%); /* Centra la línea */
+    transition: width 0.3s ease; /* Efecto de animación */
+}
+
+.navegacion ul li a:hover::after {
+    width: 100%; /* Expande la línea al hacer hover */
+}
+
+.logo {
+    
+    z-index: 1001; /* Asegura que esté sobre otros elementos */
+    
+    margin-left: -50px; /* mueve el logo hacia la izquierda */
+}
+
+
+
+.logo img {
+    height: 160px;        /* tamaño del logo */
+    width: auto;         /* mantiene proporción */
+    display: block;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+    margin-top: 15px;
+    
+}
+
+.logo img:hover {
+    transform: scale(1.05);
+}
+
+
+.navegacion nav ul {
+    list-style: none; /* Elimina los puntos de las listas */
+    display: flex; /* Alinea los enlaces en fila */
+    gap: 25px; /* Espaciado entre los enlaces */
+    margin: 0;
+    padding: 0;
+}
+
+.navegacion nav ul li a {
+    color: rgb(255, 255, 255); /* Texto blanco */
+    text-decoration: none; /* Sin subrayado */
+    font-size: 16px; /* Tamaño del texto */
+    position: relative; /* Necesario para la animación de la línea */
+    transition: all 0.3s ease; /* Animaciones suaves */
+    font-weight: 500;
+    white-space: nowrap; /* Evita saltos de línea */
+    
+}
+
+.navegacion nav ul li a:hover {
+    transform: scale(1.1); /* Agrandamiento al pasar cursor */
+}
+
+.navegacion nav ul li a::after {
+    content: ""; /* Línea decorativa */
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: rgb(255, 255, 255);
+    transform: translateX(-50%);
+    transition: width 0.3s ease;
+}
+
+.navegacion nav ul li a:hover::after{
+    width: 100%; /* Muestra la línea al hacer hover */
+}
+
+
+
+/* -------------------- */
+/* HERO PRINCIPAL       */
+/* -------------------- */
+
+
+.hero {
+    height: 100vh;
+    background: url("photo-1768296100101-edaa2ffaad15.jpg") center/cover no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+    color: #000; /* Texto oscuro porque el fondo es claro */
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  pointer-events: none;
+  height: 200px;
+
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0) 0%,
+    rgb(255, 255, 255) 100%
+  );
+}
+
+.hero h1 {
+    font-size: 55px;
+    font-weight: 800;
+    color: white;
+    text-shadow: 0 4px 10px rgba(0,0,0,0.4);
+}
+
+.bt-video {
+    background: #000000;
+    color: #fff;
+    border: none;
+    padding: 15px 40px;
+    font-size: 18px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.bt-video:hover {
+    background: #6e747e;
+    transform: scale(1.05);
+}
+
+/* -------------------- */
+/* QUIÉNES SOMOS        */
+/* -------------------- */
+
+.quienes {
+    padding: 100px 40px;
+    margin-top: 40px;
+    
+}
+
+.contenedor {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 60px;
+}
+
+.contenedor img {
+    width: 450px;
+    border-radius: 10px;
+}
+
+.informacion h2 {
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+.resaltar {
+    font-weight: 700;
+    color: #004aad;
+}
+
+/* -------------------- */
+/* TARJETAS             */
+/* -------------------- */
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 50px;
+    flex-wrap: wrap;
+    padding: 0 20px;
+}
+
+.card {
+    position: relative;
+    width: 300px;
+    height: 200px;
+    background-color: #ffffff;
+    color: rgb(255, 255, 255);
+    border-radius: 20px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 22px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    margin-top: 40px;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.5);
+}
+
+.default-text {
+    position: absolute;
+    z-index: 2;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    padding: 0 20px;
+    line-height: 1.5;
+    color: #000000;
+}
+
+.card .content {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    background: rgba(107, 105, 105, 0.92);
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    z-index: 1;
+}
+
+.card .content .contenido {
+    font-size: 14px;
+    line-height: 1.4;
+    max-width: 85%;
+    text-align: center;
+    padding: 8px;
+}
+
+.card .content p {
+    font-size: 14px;      /* Tamaño más pequeño */
+    line-height: 1.4;     /* Mejor lectura */
+}
+
+.card:hover .default-text {
+    transform: translateY(-20px);
+    opacity: 0;
+}
+
+.card:hover .content {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* -------------------- */
+/* PROYECTOS            */
+/* -------------------- */
+.proyectos {
+    padding: 100px 40px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.proyectos h2 {
+    text-align: center;
+    font-size: 42px;
+    font-weight: 800;
+    color: #1a1a1a;
+    margin-bottom: 60px;
+}
+
+/* TARJETA */
+.proyecto-card {
+    display: flex;
+    gap: 35px;
+    background: #ffffff;
+    padding: 35px;
+    border-radius: 18px;
+    box-shadow: 0 12px 35px rgba(0,0,0,0.10);
+    margin-bottom: 50px;
+    align-items: center;
+    transition: 0.3s ease;
+}
+
+/* INVERTIR ORDEN (imagen derecha) */
+.proyecto-card.reverse {
+    flex-direction: row-reverse;
+}
+
+/* HOVER */
+.proyecto-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 45px rgba(0,0,0,0.15);
+}
+
+/* IMAGEN */
+.proyecto-card img {
+    width: 420px;
+    height: 260px;
+    border-radius: 14px;
+    object-fit: cover;
+}
+
+/* INFO */
+.proyecto-info {
+    flex: 1;
+}
+
+.proyecto-year {
+    font-size: 15px;
+    font-weight: 700;
+    color: #004aad;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+    display: inline-block;
+}
+
+.proyecto-title {
+    font-size: 30px;
+    font-weight: 800;
+    color: #1a1a1a;
+    margin-bottom: 8px;
+}
+
+.proyecto-location {
+    font-size: 17px;
+    color: #555;
+    margin-bottom: 18px;
+}
+
+.proyecto-desc {
+    font-size: 16px;
+    color: #333;
+    line-height: 1.55;
+    margin-bottom: 22px;
+    max-width: 600px;
+}
+
+.proyecto-year {
+    display: inline-block;
+    background: #000;          /* Fondo negro */
+    color: #fff;               /* Texto blanco */
+    padding: 6px 16px;         /* Tamaño compacto */
+    border-radius: 50px;       /* Súper redondeado */
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+/* ETIQUETA DESTACADA */
+.proyecto-tag {
+    display: inline-block;
+    background: #e8f0ff;
+    color: #004aad;
+    padding: 10px 18px;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 700;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.proyecto-btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 22px;
+    background: #004aad;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.proyecto-btn:hover {
+    background: #00337a;
+    transform: translateY(-2px);
+}
+/* -------------------- */
+/* SIGNIFICADO DEL NOMBRE */
+/* -------------------- */
+
+.zenith-section {
+    padding: 140px 40px;
+    background: linear-gradient(135deg, #ffffff 0%, #e9f1ff 100%);
+    display: flex;
+    justify-content: center;
+}
+
+.zenith-container {
+    text-align: center;
+    max-width: 800px;
+    animation: fadeUp 1s ease forwards;
+    opacity: 0;
+}
+
+@keyframes fadeUp {
+    from { transform: translateY(30px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.zenith-title {
+    font-size: 60px;
+    font-weight: 900;
+    color: #0a0a0a;
+    margin-bottom: 25px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.zenith-line {
+    font-size: 22px;
+    color: #333;
+    margin: 10px 0;
+    line-height: 1.6;
+}
+
+.zenith-key {
+    color: #004aad;
+    font-weight: 800;
+    font-size: 24px;
+}
+
+.zenith-social {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+.zenith-circle {
+    width: 60px;
+    height: 60px;
+    background: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+    transition: 0.3s ease;
+}
+
+.zenith-circle:hover {
+    transform: translateY(-6px) scale(1.08);
+    box-shadow: 0 12px 35px rgba(0,0,0,0.18);
+}
+
+.zenith-circle img {
+    width: 32px;
+    height: 32px;
+}
+
+
+
+.social-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+}
+
+.social-link img {
+    width: 60px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.social-link img:hover {
+    transform: scale(1.2);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.7);
+  backdrop-filter: blur(5px);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: #111;
+  padding: 20px;
+  border-radius: 15px;
+  width: 80%;
+  max-width: 700px;
+  position: relative;
+}
+
+.modal video {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.cerrar {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 25px;
+  cursor: pointer;
+  color: white;
+}
+
+
+
+
+/* =================== MODAL =================== */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    position: relative;
+    width: 80%;
+    max-width: 800px;
+    aspect-ratio: 16/9;
+    background: black;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.modal-content iframe {
+    width: 100%;
+    height: 100%;
+}
+
+.modal .close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+}
+
+.btn-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px 15px;
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 18px;
+    z-index: 999;
+}

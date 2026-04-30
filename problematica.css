@@ -1,0 +1,399 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    overflow-x: relative;
+    
+    background-size: cover;
+    
+    
+}
+
+html {
+    scroll-behavior: smooth;
+} 
+
+/* barra de navegacion*/
+.navegacion {
+    position: fixed;
+    height: 60px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background: rgba(86, 93, 103, 0.5); /* oscuro translúcido */
+    padding: 10px 5%;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    transform: translateY(0); /* Inicialmente visible */
+    transition: transform 0.3s ease-in-out; /* Animación de desplazamiento */
+}
+
+.nav-menu {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.navegacion .nav-menu ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+}
+
+.navegacion .nav-menu ul li a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-size: 16px;
+    position: relative;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    white-space: nowrap;
+    font-weight: bold;
+
+}
+
+.navegacion .nav-menu ul li a::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: white;
+    transform: translateX(-50%);
+    transition: width 0.3s ease;
+}
+
+.navegacion .nav-menu ul li a:hover::after {
+    width: 100%;
+}
+
+.navegacion ul li a {
+    color: white; /* Color del texto */
+    text-decoration: none; /* Sin subrayado */
+    font-size: 16px;
+    position: relative; /* Necesario para la animación */
+    transition: all 0.3s ease;
+    font-weight: 500;
+    white-space: nowrap; /* Evita saltos de línea */
+}
+
+.navegacion ul li a::after {
+    content: ""; /* Crea el efecto de línea */
+    position: absolute; /* Línea colocada debajo del texto */
+    bottom: -3px; /* Espaciado desde el texto */
+    left: 50%; /* Comienza en el centro */
+    width: 0; /* Inicialmente oculta */
+    height: 2px; /* Grosor de la línea */
+    background-color: white; /* Color de la línea */
+    transform: translateX(-50%); /* Centra la línea */
+    transition: width 0.3s ease; /* Efecto de animación */
+}
+
+.navegacion ul li a:hover::after {
+    width: 100%; /* Expande la línea al hacer hover */
+}
+
+.logo {
+    
+    z-index: 1001; /* Asegura que esté sobre otros elementos */
+    margin-left: -50px; /* mueve el logo hacia la izquierda */
+}
+
+
+
+.logo img {
+    height: 160px;        /* tamaño del logo */
+    width: auto;         /* mantiene proporción */
+    display: block;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+    margin-top: 15px;
+    
+}
+
+.logo img:hover {
+    transform: scale(1.05);
+}
+
+
+.navegacion nav ul {
+    list-style: none; /* Elimina los puntos de las listas */
+    display: flex; /* Alinea los enlaces en fila */
+    gap: 25px; /* Espaciado entre los enlaces */
+    margin: 0;
+    padding: 0;
+}
+
+.navegacion nav ul li a {
+    color: rgb(255, 255, 255); /* Texto blanco */
+    text-decoration: none; /* Sin subrayado */
+    font-size: 16px; /* Tamaño del texto */
+    position: relative; /* Necesario para la animación de la línea */
+    transition: all 0.3s ease; /* Animaciones suaves */
+    font-weight: 500;
+    white-space: nowrap; /* Evita saltos de línea */
+    
+}
+
+.navegacion nav ul li a:hover {
+    transform: scale(1.1); /* Agrandamiento al pasar cursor */
+}
+
+.navegacion nav ul li a::after {
+    content: ""; /* Línea decorativa */
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: rgb(255, 255, 255);
+    transform: translateX(-50%);
+    transition: width 0.3s ease;
+}
+
+.navegacion nav ul li a:hover::after{
+    width: 100%; /* Muestra la línea al hacer hover */
+}
+
+
+
+/* -------------------- */
+/* Primera seccion       */
+/* -------------------- */
+
+.hero-ihome {
+    position: relative;
+    height: 100vh;
+    background: url('Copilot_20260421_021037.png') center/cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.overlay {
+    background: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(6px);
+    padding: 60px 80px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+    animation: fadeIn 1.2s ease forwards;
+}
+
+.hero-title {
+    font-size: 70px;
+    font-weight: 900;
+    color: #000;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+}
+
+.hero-sub {
+    font-size: 24px;
+    color: #333;
+    font-style: italic;
+    margin-bottom: 30px;
+}
+
+.hero-btn {
+    background: #000000;
+    color: #fff;
+    border: none;
+    padding: 15px 40px;
+    font-size: 18px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.hero-btn:hover {
+    background: #6e747e;
+    transform: scale(1.05);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+
+/* -------------------- */
+/* Planos       */
+/* -------------------- */
+.ihome-blueprint-section {
+    padding: 100px 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.ihome-blueprint-container {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    max-width: 1300px;
+}
+
+.ihome-blueprint-image img {
+    width: 550px;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.ihome-blueprint-text {
+    max-width: 600px;
+}
+
+.bp-title {
+    font-size: 40px;
+    font-weight: 900;
+    margin-bottom: 20px;
+}
+
+.bp-desc {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 18px;
+    color: #333;
+}
+
+/* CONTENEDOR GENERAL */
+.funcionalidades-ihome {
+    padding: 80px 40px;
+    text-align: center;
+    font-family: "Inter", sans-serif;
+}
+
+.titulo-func {
+    font-size: 42px;
+    font-weight: 900;
+    margin-bottom: 50px;
+}
+
+/* GRID 2x2 */
+.func-grid-2x2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px 60px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* TARJETA */
+.func-box {
+    text-align: center;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 14px;
+    transition: 0.3s ease;
+}
+
+/* IMAGEN */
+.func-box img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 14px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    transition: 0.35s ease;
+}
+
+/* TEXTO */
+.func-box h3 {
+    margin-top: 15px;
+    font-size: 24px;
+    font-weight: 800;
+    transition: 0.3s ease;
+}
+
+.func-box p {
+    font-size: 17px;
+    color: #444;
+    margin-top: 8px;
+    line-height: 1.5;
+    transition: 0.3s ease;
+}
+
+/* HOVER EFECTO */
+.func-box:hover {
+    border: 3px solid #000;      /* BORDE NEGRO */
+    transform: translateY(-5px); /* Sube un poquito */
+}
+
+.func-box:hover img {
+    filter: brightness(0.7);
+    transform: scale(1.03);
+}
+
+.func-box:hover h3 {
+    color: #004aad;
+}
+
+.func-box:hover p {
+    opacity: 0.7;
+}
+
+
+
+/* =================== MODAL =================== */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    position: relative;
+    width: 80%;
+    max-width: 800px;
+    aspect-ratio: 16/9;
+    background: black;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.modal-content video {
+    width: 100%;
+    height: 100%;
+}
+
+.modal .close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+}
+
+.btn-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px 15px;
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 18px;
+    z-index: 999;
+}
