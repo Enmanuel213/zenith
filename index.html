@@ -18,16 +18,16 @@
 
 <body id="top">
 
-    <!-- NAV -->
-    <header>
+   <!-- HEADER -->
+<header>
         <div class="navegacion">
             <div class="logo">
                 <a href="index.html">
-                    <img src="Copilot_20260424_160829.png" alt="">
+                <img src="Copilot_20260424_160829.png" alt="">
                 </a>
             </div>
 
-            <nav class="nav-menu">
+            <nav class="nav-menu" id="nav-menu">
                 <ul>
                     <li><a href="nuestroequipo.html">Nuestro Equipo</a></li>
                     <li><a href="problematica.html">Ihome</a></li>
@@ -36,6 +36,37 @@
             </nav>
         </div>
     </header>
+
+<!-- BOTÓN HAMBURGUESA -->
+<div class="menu-toggle">
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
+
+
+<!-- MENÚ FULLSCREEN -->
+<nav class="nav-menu-fullscreen">
+
+    <div class="menu-content">
+
+        <div class="menu-logo">
+            <a href="index.html">
+                <img src="logo movil.png" alt="">
+            </a>
+        </div>
+      
+        <ul>
+            <li><a href="nuestroequipo.html">Nuestro Equipo</a></li>
+            <li><a href="problematica.html">Ihome</a></li>
+            <li><a href="Zero.html">Zero</a></li>
+        </ul>
+
+    </div>
+
+</nav>
+
+
     
 
     <!-- HERO PRINCIPAL -->
@@ -182,7 +213,25 @@
 
 </section>
 
+<script>
 
+const menuToggle = document.querySelector(".menu-toggle");
+const navMenu = document.querySelector(".nav-menu-fullscreen");
+
+menuToggle.addEventListener("click", () => {
+
+    menuToggle.classList.toggle("active");
+    navMenu.classList.toggle("active");
+
+});
+
+document.querySelectorAll(".card").forEach(card => {
+    card.addEventListener("click", () => {
+        card.classList.toggle("expanded");
+    });
+});
+
+</script>
 
 
 </body>

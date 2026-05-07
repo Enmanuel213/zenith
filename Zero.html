@@ -15,38 +15,64 @@
 
 </head>
 <body id="top">
-    <header>
+    
+       <header>
         <div class="navegacion">
-            <!-- Logo a la izquierda -->
             <div class="logo">
                 <a href="index.html">
-                    <img src="Copilot_20260424_160829.png" alt="">
-            
+                <img src="Copilot_20260424_160829.png" alt="">
                 </a>
             </div>
-     
-            
-            <!-- Menú de navegación -->
-            <div class="nav-menu" id="nav-menu">
+
+            <nav class="nav-menu" id="nav-menu">
                 <ul>
-                     <li><a href="nuestroequipo.html">Nuestro Equipo</a></li>
+                    <li><a href="nuestroequipo.html">Nuestro Equipo</a></li>
                     <li><a href="problematica.html">Ihome</a></li>
                     <li><a href="Zero.html">Zero</a></li>
-                </div>
-
-
+                </ul>
+            </nav>
         </div>
     </header>
-    <section class="technocity">
+
+<!-- BOTÓN HAMBURGUESA -->
+<div class="menu-toggle">
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
+
+
+<!-- MENÚ FULLSCREEN -->
+<nav class="nav-menu-fullscreen">
+
+    <div class="menu-content">
+
+        <div class="menu-logo">
+            <a href="index.html">
+                <img src="logo movil.png" alt="">
+            </a>
+        </div>
+      
+        <ul>
+            <li><a href="nuestroequipo.html">Nuestro Equipo</a></li>
+            <li><a href="problematica.html">Ihome</a></li>
+            <li><a href="Zero.html">Zero</a></li>
+        </ul>
+
+    </div>
+
+</nav>
+
+
+
+<section class="technocity">
     <div class="overlay">
         <div class="contenido-techno">
             
             <h1>TechnoCity</h1>
             <h3>Tecnologías inteligentes para entornos culturales y turísticos  </h3>
             <p>Integrando soluciones inteligentes para mejorar la experiencia del visitante y optimizar la gestión ambiental en la Zona Colonial de Santo Domingo</p>
-            <button class="btn-techno" onclick="location.href='#resumen-proyecto'">
-  Explorar proyecto
-</button>
+            <button class="btn-techno" onclick="location.href='#resumen-proyecto'">Explorar proyecto</button>
     </div>
 </section>
 
@@ -226,6 +252,19 @@
 </section>
 
 
+<script>
+
+const menuToggle = document.querySelector(".menu-toggle");
+const navMenu = document.querySelector(".nav-menu-fullscreen");
+
+menuToggle.addEventListener("click", () => {
+
+    menuToggle.classList.toggle("active");
+    navMenu.classList.toggle("active");
+
+});
+
+</script>
 
 
 </body>
