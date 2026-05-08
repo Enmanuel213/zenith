@@ -502,6 +502,20 @@ body {
         font-size: 12px;
         line-height: 1.4;
     }
+
+    .card:hover img {
+    opacity: 0.35;
+    transform: scale(1.02);
+    transition: opacity 0.15s ease-out, transform 0.15s ease-out;
+}
+            
+.card:hover {
+    transform: scale(1.03);
+}
+
+.card:hover .content {
+    opacity: 1;
+}
    
 
 }
