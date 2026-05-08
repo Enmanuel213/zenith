@@ -232,6 +232,31 @@ menuToggle.addEventListener("click", () => {
 
 });
 
+document.addEventListener("DOMContentLoaded", () => {
+    const cards = document.querySelectorAll('.card');
+
+    cards.forEach(card => {
+        card.addEventListener('click', function(e) {
+            // Si la tarjeta ya está activa, la cerramos
+            if (this.classList.contains('active')) {
+                this.classList.remove('active');
+            } else {
+                // Cerramos cualquier otra tarjeta que esté abierta
+                cards.forEach(c => c.classList.remove('active'));
+                // Abrimos la tarjeta actual
+                this.classList.add('active');
+            }
+        });
+    });
+
+    // Opcional: Cerrar la tarjeta si tocas en cualquier otro lugar de la pantalla
+    document.addEventListener('click', function(e) {
+        if (!e.target.closest('.card')) {
+            cards.forEach(c => c.classList.remove('active'));
+        }
+    });
+});
+
 </script>
 
 

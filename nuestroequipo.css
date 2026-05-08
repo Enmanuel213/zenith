@@ -503,19 +503,21 @@ body {
         line-height: 1.4;
     }
 
-    .card:hover img {
-    opacity: 0.35;
-    transform: scale(1.02);
-    transition: opacity 0.15s ease-out, transform 0.15s ease-out;
-}
-            
-.card:hover {
+/* Modifica estas reglas para incluir .active */
+
+.card:hover, .card.active {
     transform: scale(1.03);
 }
 
-.card:hover .content {
+.card:hover img, .card.active img {
+    opacity: 0.35;
+    transform: scale(1.02);
+    
+}
+
+.card:hover .content, .card.active .content {
     opacity: 1;
 }
-   
+
 
 }
