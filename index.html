@@ -231,6 +231,23 @@ document.querySelectorAll(".card").forEach(card => {
     });
 });
 
+const cards = document.querySelectorAll(".card");
+
+cards.forEach(card => {
+    card.addEventListener("click", () => {
+
+        // Cerrar cualquier tarjeta que esté abierta
+        cards.forEach(c => {
+            if (c !== card) {
+                c.classList.remove("expanded");
+            }
+        });
+
+        // Alternar la tarjeta actual
+        card.classList.toggle("expanded");
+    });
+});
+
 </script>
 
 
